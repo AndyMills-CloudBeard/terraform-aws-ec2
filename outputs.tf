@@ -36,3 +36,8 @@ output "network_interface_id" {
   description = "The network interface ID for the AWS instance"
   value       = aws_instance.this[*].primary_network_interface_id
 }
+
+output "public_ips" {
+  description = "Public IPs assigned to the EC2 instances"
+  value       = aws_instance.this[*].public_ip
+}
